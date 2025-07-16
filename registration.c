@@ -39,3 +39,28 @@ int registerUser(UserList* list) {
     printf("Registration successful!\n");
     return 1;
 }
+
+int loginUser(UserList* list) {
+    char username[50];
+    char password[50];
+
+    printf("Enter username: ");
+    fgets(username, sizeof(username), stdin);
+    username[strcspn(username, "\n")] = 0;
+
+    printf("Enter password: ");
+    fgets(password, sizeof(password), stdin);
+    password[strcspn(password, "\n")] = 0;
+
+    for (int i = 0; i < list->count; i++) {
+        if (strcmp(list->users[i].username, username) == 0 &&
+            strcmp(list->users[i].password, password) == 0) {
+            printf("Login successful!\n");
+            return 1;
+        }
+    }
+
+    printf("Invalid username or password.\n");
+    return 0;
+}
+
