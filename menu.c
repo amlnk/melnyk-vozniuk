@@ -6,5 +6,8 @@ void showMenu() {
     printf("1. Pizza Margherita - 120 UAH\n");
     printf("2. Chicken Burger - 95 UAH\n");
     printf("3. Sushi Set - 220 UAH\n");
-   
+    printf("4. Caesar Salad - 85 UAH\n");
+    printf("5. Pasta Carbonara - 110 UAH\n");
+    printf("6. Chicken Nuggets - 70 UAH\n");
+    printf("0. Back to main menu\n");
 }
